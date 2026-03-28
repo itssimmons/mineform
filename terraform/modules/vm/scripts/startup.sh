@@ -37,7 +37,7 @@ chown -R minecraft:minecraft /opt/minecraft
 chmod +x /opt/minecraft/run.sh
 
 # Setup Supervisor to manage the Minecraft server process
-cp /opt/minecraft/supervisord.conf /etc/supervisord.conf
+cp /opt/minecraft/ci/supervisord.conf /etc/supervisord.conf
 
 systemctl enable supervisord
 systemctl start supervisord
