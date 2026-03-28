@@ -6,9 +6,9 @@ This repository contains two things:
 2. Terraform infrastructure-as-code for provisioning and managing the server's cloud host on Google Cloud Platform (GCP)
 
 ## Structure
-- `/` — Minecraft server root (Paper JAR, world data, plugins, server config)
+- `/server/` — Minecraft server root (Paper JAR, world data, plugins, server config)
+- `/server/plugins/` — Bukkit/Paper plugin JARs
 - `/terraform/` — GCP Terraform configuration (compute instances, networking, firewall rules, storage)
-- `/plugins/` — Bukkit/Paper plugin JARs
 
 ## Conventions
 - Minecraft server version: Paper 1.20.4
@@ -19,10 +19,9 @@ This repository contains two things:
 
 ## Minecraft Server
 - Default port: 25565
-- EULA accepted: `eula.txt`
-- Plugins go in `plugins/`
+- EULA accepted: `/server/eula.txt`
+- Plugins go in `/server/plugins/`
 
 ## Terraform
 - All infrastructure changes must be applied via `terraform plan` / `terraform apply`
 - Remote state should be stored in a GCS bucket (never commit `terraform.tfstate` locally)
-- Tag all GCP resources with `project = "terra-minecraft"`
