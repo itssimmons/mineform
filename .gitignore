@@ -1,0 +1,103 @@
+# ──────────────────────────────────────────
+# Minecraft Server
+# ──────────────────────────────────────────
+
+# World data (generated at runtime)
+world/
+world_nether/
+world_the_end/
+
+# Server logs & crash reports
+logs/
+crash-reports/
+debug/
+
+# Dynamic server files
+*.lock
+banned-ips.json
+banned-players.json
+ops.json
+whitelist.json
+usercache.json
+usernamecache.json
+server.properties
+bukkit.yml
+spigot.yml
+paper-global.yml
+paper-world-defaults.yml
+config/
+cache/
+
+# Java / JVM files
+*.class
+*.jar
+*.log
+
+# Session / temporary files
+*.tmp
+session.lock
+
+# ──────────────────────────────────────────
+# Terraform
+# ──────────────────────────────────────────
+
+# Local .terraform directory and lock file
+**/.terraform/
+**/.terraform.lock.hcl
+
+# State files — stored remotely in GCS
+*.tfstate
+*.tfstate.*
+*.tfstate.backup
+
+# Sensitive variable files
+*.tfvars
+*.tfvars.json
+!example.tfvars
+
+# Plan output files
+*.tfplan
+
+# Override files
+override.tf
+override.tf.json
+*_override.tf
+*_override.tf.json
+
+# ──────────────────────────────────────────
+# GCP / Credentials
+# ──────────────────────────────────────────
+credentials.json
+service-account*.json
+*-key.json
+*.pem
+*.p12
+.env
+.env.*
+!.env.example
+
+# ──────────────────────────────────────────
+# OS & Editor artifacts
+# ──────────────────────────────────────────
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# JetBrains IDEs
+.idea/
+
+# VS Code
+.vscode/
+
+# Vim / Emacs
+*.swp
+*.swo
+*~
+\#*\#
