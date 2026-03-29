@@ -14,11 +14,11 @@ jobs:
         run: |
           echo <<EOF
           TEST 1 ....................... RUNNING
-          TEST 1 ....................... \033[32mPASSED\033[0m
+          TEST 1 ....................... PASSED
           TEST 2 ....................... RUNNING
-          TEST 2 ....................... \033[32mPASSED\033[0m
+          TEST 2 ....................... PASSED
           TEST 3 ....................... RUNNING
-          TEST 3 ....................... \033[32mPASSED\033[0m
+          TEST 3 ....................... PASSED
           EOF
           
       - name: Test results

@@ -13,7 +13,7 @@ variable "instance_name" {
 variable "machine_type" {
 	description = "The machine type to use for the Compute Engine instance."
 	type        = string
-	default     = "e2-medium"
+	default     = "e2-custom-4-6144"
 }
 
 variable "zone" {

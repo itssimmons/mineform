@@ -17,3 +17,18 @@ resource "google_compute_firewall" "minecraft" {
   source_ranges = ["0.0.0.0/0"]
   target_tags = ["minecraft-server"]
 }
+
+resource "google_compute_firewall" "ssh" {
+	name    = "allow-ssh"
+	network = var.network_name
+	
+	project = var.project_id
+
+	allow {
+		protocol = "tcp"
+		ports    = ["22"]
+	}
+	
+	source_ranges = ["0.0.0.0/0"]
+	target_tags = ["allow-ssh"]
+}

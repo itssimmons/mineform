@@ -8,8 +8,8 @@ resource "google_service_account" "sa" {
   display_name = "Service Account"
 }
 
-resource "google_service_account_iam_member" "default-account-iam" {
-	service_account_id = google_service_account.sa.name
-	role               = "roles/iam.serviceAccountUser"
-	member             = "serviceAccount:${google_service_account.sa.email}"
+resource "google_project_iam_member" "secret_access" {
+  project = var.project_id
+  role    = "roles/secretmanager.secretAccessor"
+  member  = "serviceAccount:${google_service_account.sa.email}"
 }

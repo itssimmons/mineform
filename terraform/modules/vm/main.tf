@@ -7,12 +7,12 @@ resource "google_compute_instance" "vm_instance" {
   
   boot_disk {
     initialize_params {
-      image = "centos-stream-10-v20260310"
+      image = "debian-cloud/debian-11"
       size  = 30
     }
   }
   
-  tags = ["minecraft-server"]
+  tags = ["minecraft-server", "allow-ssh"]
 
   network_interface {
     network = var.network_name
@@ -22,7 +22,7 @@ resource "google_compute_instance" "vm_instance" {
     }
   }
   
-  metadata_startup_script = file("${path.module}/scripts/startup.sh")
+  # metadata_startup_script = file("${path.module}/scripts/startup.sh")
 	metadata = {
 		serial-port-enable = "TRUE"
 	}
