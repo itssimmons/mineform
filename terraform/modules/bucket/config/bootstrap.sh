@@ -18,7 +18,8 @@ apt-get install -y \
   openssh-client \
   openjdk-17-jre-headless \
   supervisor \
-  build-essential
+  build-essential \
+  git-lfs
 
 # Create a directory for the Minecraft server
 mkdir -p /opt/minecraft
@@ -79,10 +80,12 @@ cd /opt/minecraft
 git clone --depth 1 --filter=blob:none --sparse git@github.com:itssimmons/mineform.git .
 git config --global --add safe.directory /opt/minecraft
 git sparse-checkout set server
+git lfs install
+git lfs pull -I "server/*"
 
 # Setup Mincraft server user and permissions
 groupadd -r minecraft
-useradd -r -g minecraft -d /opt/minecraft
+useradd -r -g minecraft -d /opt/minecraft -s /bin/bash minecraft
 
 chown -R minecraft:minecraft /opt/minecraft
 chmod +x /opt/minecraft/server/run.sh
@@ -92,7 +95,7 @@ git clone https://github.com/Tiiffi/mcrcon.git /tmp/mcrcon
 cd /tmp/mcrcon
 make
 make install
-mcrcon -h
+mcrcon -h > /dev/null 2>&1 || false
 rm -rf /tmp/mcrcon
 
 chmod +x /usr/local/bin/minecraft-rcon-shell
