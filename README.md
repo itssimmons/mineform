@@ -1,58 +1,63 @@
-# terra-minecraft
+# Mineform
 
-A **Paper 1.20.4** Minecraft server paired with **Terraform** infrastructure-as-code for fully automated provisioning on **Google Cloud Platform (GCP)**.
-
----
+A collection of Minecraft server templates paired with **Terraform** (IaC) for fully automated provisioning on **Google Cloud Platform**.
 
 ## Repository Structure
 
 ```
-terra-minecraft/
-├── ci/
-│   └── scripts/
-│       └── start.sh        # Server start script (Aikar's JVM flags)
-├── docs/                   # Additional documentation
-├── plugins/                # Bukkit/Paper plugin JARs
-├── terraform/              # GCP infrastructure (compute, networking, storage)
-├── eula.txt                # Minecraft EULA acceptance
-└── paper-1.20.4-499.jar    # Paper server JAR
+mineform/
+├── 📂 ci/
+│   └── 📂 scripts/
+│       └── ⚙️ start.sh              # Server start script (Aikar's JVM flags)
+├── 📂 docs/                        # Additional documentation
+├── 📂 plugins/                     # Bukkit/Paper plugin JARs
+├── 📂 terraform/                   # GCP infrastructure (IaC)
+│   ├── 📂 environments/            # Environment-specific configurations
+│   │   └── 📂 prod/
+│   │       ├── 📄 main.tf          # Root module composition
+│   │       ├── 📄 variables.tf     # Input variables
+│   │       ├── 📄 outputs.tf       # Outputs
+│   │       ├── 📄 provider.tf      # Provider configuration
+│   │       └── 📄 terraform.tfvars # Environment values
+│   │
+│   └── 📂 modules/                 # Reusable Terraform modules
+│       ├── 📂 compute/
+│       ├── 📂 network/
+│       ├── 📂 firewall/
+│       └── 📂 ...
+├── 📄 eula.txt                     # Minecraft EULA acceptance
+└── 🚀 run.sh                       # Paper server startup entrypoint
 ```
-
----
 
 ## Prerequisites
 
-| Tool | Version |
-|------|---------|
-| Java | 17+ |
-| Terraform | 1.5+ |
-| gcloud CLI | latest |
-
----
+| Tool       | Version |
+|------------|---------|
+| Terraform  | 1.5+    |
+| gcloud CLI | latest  |
 
 ## Getting Started
 
 ### 1. Provision Infrastructure
 
 ```bash
-cd terraform
+cd terraform/environments/prod
 terraform init
-terraform plan
-terraform apply
+terraform plan -out=tfplan
+terraform apply "tfplan"
 ```
 
-> All GCP resources are tagged with `project = "terra-minecraft"`.  
+> All GCP resources are tagged with `project = "itssimmons-mineform"`.  
 > Remote state is stored in a GCS bucket — never commit `.tfstate` locally.
 
 ### 2. Start the Server
 
 ```bash
-bash ci/scripts/start.sh
+sudo systemctl enable minecraft-bootstap
 ```
 
-The start script uses [Aikar's JVM flags](https://aikar.co/mcflags.html) tuned for G1GC with 2 GB minimum and 4 GB maximum heap.
-
----
+> [!IMPORTANT]
+> There is no need to execute any commands on the server; the startup scripts shall attend to all necessary preparations. You need only wait a few minutes before the server becomes available for connection.
 
 ## Configuration
 
@@ -60,20 +65,18 @@ The start script uses [Aikar's JVM flags](https://aikar.co/mcflags.html) tuned f
 - **EULA:** Accepted in `eula.txt`
 - **Plugins:** Drop JARs into `plugins/`
 - **Server config:** `server.properties`, `bukkit.yml`, `spigot.yml`, `paper-global.yml` (generated at runtime, not tracked in git)
-
----
+- **Offline Mode** false
 
 ## Infrastructure Overview
 
-The `terraform/` directory manages:
+The `terraform/` directory manages the following modules:
 
 - **Compute** — GCP Compute Engine VM instance
 - **Networking** — VPC, firewall rules (port 25565 TCP/UDP)
 - **Storage** — GCS bucket for Terraform remote state and world backups
 
-> ⚠️ Do not modify GCP resources manually. All changes must go through `terraform plan` / `terraform apply`.
-
----
+> [!WARNING]
+>  ⚠️ Do not modify GCP resources manually. All changes must go through `terraform plan` / `terraform apply`.
 
 ## Secrets & Credentials
 
@@ -83,8 +86,14 @@ Sensitive values (GCP service account keys, RCON passwords, etc.) are **never co
 - GCP Secret Manager for runtime secrets
 - Environment variables for CI/CD pipelines
 
----
+## Contributing
+
+Any kind of collaboration is most welcome. Before anything, please review the following resources:
+
+- [CONTRIBUTING.md](CONTRIBUTING.md) — Guidelines for contributing to the project  
+- [PULL_REQUEST_TEMPLATE.md](PULL_REQUEST_TEMPLATE.md) — Instructions and checklist for submitting pull requests  
+- [CODE_OF_CONDUCT.md](CODE_OF_CONDUCT.md) — Expected standards for community behavior (if applicable) 
 
 ## License
 
-MIT © [Simon Villafane](LICENSE)
+MIT © [Simón Villafañe](LICENSE)
