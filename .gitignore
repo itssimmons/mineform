@@ -20,7 +20,7 @@ ops.json
 whitelist.json
 usercache.json
 usernamecache.json
-server.properties
+!server.properties
 bukkit.yml
 spigot.yml
 paper-global.yml
