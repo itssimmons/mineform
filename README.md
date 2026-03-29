@@ -6,27 +6,31 @@ A collection of Minecraft server templates paired with **Terraform** (IaC) for f
 
 ```
 mineform/
-├── 📂 ci/
-│   └── 📂 scripts/
-│       └── ⚙️ start.sh              # Server start script (Aikar's JVM flags)
-├── 📂 docs/                        # Additional documentation
-├── 📂 plugins/                     # Bukkit/Paper plugin JARs
-├── 📂 terraform/                   # GCP infrastructure (IaC)
-│   ├── 📂 environments/            # Environment-specific configurations
-│   │   └── 📂 prod/
-│   │       ├── 📄 main.tf          # Root module composition
-│   │       ├── 📄 variables.tf     # Input variables
-│   │       ├── 📄 outputs.tf       # Outputs
-│   │       ├── 📄 provider.tf      # Provider configuration
-│   │       └── 📄 terraform.tfvars # Environment values
-│   │
-│   └── 📂 modules/                 # Reusable Terraform modules
-│       ├── 📂 compute/
-│       ├── 📂 network/
-│       ├── 📂 firewall/
-│       └── 📂 ...
-├── 📄 eula.txt                     # Minecraft EULA acceptance
-└── 🚀 run.sh                       # Paper server startup entrypoint
+├── 📂 .github/                  # GitHub workflows and community files
+├── 📂 docs/                     # Additional documentation
+├── 📂 server/                   # Minecraft server template
+│   ├── 📂 config/               # Mod/plugin configuration files
+│   ├── 📂 kubejs/               # Custom scripting (KubeJS)
+│   ├── 📂 libraries/            # Server libraries
+│   ├── 📂 mods/                 # Forge/Fabric mods
+│   ├── 📂 plugins/              # Bukkit/Spigot/Paper plugins
+│   ├── 📄 eula.txt              # Mojang EULA agreement
+│   ├── 📜 run.sh                # Server startup script
+│   ├── ⚙️ server.properties     # Core server configuration
+│   └── 🧠 user_jvm_args.txt     # JVM tuning flags (Aikar, etc.)
+├── 📂 terraform/                # Infrastructure as Code (GCP)
+│   ├── 📂 environments/
+│   │   └── 📂 prod/             # Production environment
+│   │       ├── 📄 main.tf
+│   │       ├── 📄 variables.tf
+│   │       ├── 📄 outputs.tf
+│   ├── 📂 modules/              # Reusable Terraform modules
+│   │   ├── 📂 compute/          # Compute resources (VMs, disks)
+│   │   ├── 📂 network/          # VPC, subnets, routing
+│   │   ├── 📂 firewall/         # Firewall rules
+│   │   └── 📂 ...               # Additional modules
+│   └── 📄 providers.tf          # Shared provider configuration
+└── 📍 README.md                 # You are here!
 ```
 
 ## Prerequisites
