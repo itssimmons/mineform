@@ -5,10 +5,6 @@ set -e
 gcloud storage cp gs://mineform-data/minecraftd.conf /etc/supervisor/conf.d/minecraftd.conf
 gcloud storage cp gs://mineform-data/minecraft-rcon-shell /usr/local/bin/minecraft-rcon-shell
 
-# Load needed environment variables from the Secret Manager
-export GITHUB_PRIVATE_KEY=$(gcloud secrets versions access latest --secret="GITHUB_PRIVATE_KEY")
-export SESSION_PUBLIC_KEY=$(gcloud secrets versions access latest --secret="SESSION_PUBLIC_KEY")
-
 # Update package index and upgrade system
 apt-get update -y
 apt-get upgrade -y
@@ -27,6 +23,10 @@ apt-get install -y \
 # Create a directory for the Minecraft server
 mkdir -p /opt/minecraft
 
+# Load secrets from Secret Manager and set up SSH keys
+export GITHUB_PRIVATE_KEY=$(gcloud secrets versions access latest --secret="GITHUB_PRIVATE_KEY")
+export SESSION_PUBLIC_KEY=$(gcloud secrets versions access latest --secret="SESSION_PUBLIC_KEY")
+
 # Set up SSH keys for GitHub and Mincraft user access
 mkdir -p ~/.ssh
 
@@ -36,9 +36,9 @@ Host github.com
   IdentityFile ~/.ssh/github_key
 EOF
 
-cat <<EOF >> ~/.ssh/sshd_config
+cat <<EOF > ~/.ssh/sshd_config
 Port 22
-PermitRootLogin no
+PermitRootLogin yes
 PasswordAuthentication no
 PubkeyAuthentication yes
 AuthenticationMethods publickey
@@ -75,6 +75,7 @@ sshd -t
 systemctl restart sshd
 
 # Clone the Minecraft server repository
+cd /opt/minecraft
 git clone --depth 1 --filter=blob:none --sparse git@github.com:itssimmons/mineform.git .
 git config --global --add safe.directory /opt/minecraft
 git sparse-checkout set server
