@@ -1,0 +1,10 @@
+#!/bin/bash
+
+RCON_HOST="127.0.0.1"
+RCON_PORT="25575"
+
+echo "RCON Console Access"
+read -p "RCON Password: " -s RCON_PASS
+echo ""
+
+exec mcrcon -H "$RCON_HOST" -P "$RCON_PORT" -p "$RCON_PASS"

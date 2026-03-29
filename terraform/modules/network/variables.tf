@@ -8,3 +8,8 @@ variable "project_id" {
 	description = "The ID of the GCP project where the firewall rule will be created."
 	type        = string	
 }
+
+variable "region" {
+	description = "The region where the subnetwork will be created."
+	type        = string
+}

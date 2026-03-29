@@ -3,6 +3,11 @@ variable "project_id" {
   type        = string
 }
 
+variable "bucket_name" {
+  description = "The name of the GCS bucket to create."
+  type        = string
+}
+
 variable "gcp" {
   type = object({
     project_id = string

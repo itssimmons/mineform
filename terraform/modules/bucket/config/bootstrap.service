@@ -1,0 +1,14 @@
+[Unit]
+Description=Minecraft Bootstrap
+After=network.target
+
+[Service]
+Type=oneshot
+User=root
+ExecStart=/root/bootstrap.sh
+RemainAfterExit=yes
+StandardOutput=append:/var/log/minecraft-bootstrap.log
+StandardError=append:/var/log/minecraft-bootstrap.log
+
+[Install]
+WantedBy=multi-user.target

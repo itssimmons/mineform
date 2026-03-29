@@ -1,7 +1,6 @@
 resource "google_compute_firewall" "minecraft" {
   name    = "allow-minecraft"
   network = var.network_name
-  
   project = var.project_id
 
   allow {
@@ -15,13 +14,12 @@ resource "google_compute_firewall" "minecraft" {
   }
   
   source_ranges = ["0.0.0.0/0"]
-  target_tags = ["minecraft-server"]
+  target_tags = ["allow-minecraft"]
 }
 
 resource "google_compute_firewall" "ssh" {
 	name    = "allow-ssh"
 	network = var.network_name
-	
 	project = var.project_id
 
 	allow {
@@ -33,16 +31,20 @@ resource "google_compute_firewall" "ssh" {
 	target_tags = ["allow-ssh"]
 }
 
-resource "google_compute_firewall" "icmp" {
-	name    = "allow-icmp"
+resource "google_compute_firewall" "metrics" {
+	name    = "allow-metrics"
 	network = var.network_name
-	
 	project = var.project_id
 
 	allow {
-		protocol = "icmp"
+		protocol = "tcp"
+		ports    = ["25565"]
 	}
 	
-	source_ranges = ["0.0.0.0/0"]
-	target_tags = ["allow-icmp"]
+	source_ranges = [
+		"35.191.0.0/16",
+		"130.211.0.0/22"
+	]
+
+  target_tags = ["allow-metrics"]	
 }

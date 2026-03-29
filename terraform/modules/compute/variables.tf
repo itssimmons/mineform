@@ -19,7 +19,6 @@ variable "machine_type" {
 variable "zone" {
 	description = "The zone to deploy the Compute Engine instance."
 	type        = string
-	default     = "southamerica-east1-a"
 }
 
 variable "project_id" {
@@ -30,4 +29,14 @@ variable "project_id" {
 variable "service_account_email" {
 	description = "The email of the service account to attach to the Compute Engine instance."
 	type        = string
+}
+
+variable "bucket_name" {
+	description = "The name of the GCS bucket to use for storing Minecraft data."
+	type        = string
+}
+
+variable "subnet_id" {
+  description = "The ID of the subnet to attach to the Compute Engine instance."
+  type        = string
 }
