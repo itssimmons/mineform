@@ -1,0 +1,13 @@
+[
+    {
+        "mob": "anomaly:anomaly_base",
+        "random": 0.50,
+        "when": "onjoin",
+        "result": "deny"
+    },
+    {
+        "mob": "anomaly:sound_entity",
+        "when": "onjoin",
+        "result": "deny"
+    }
+]

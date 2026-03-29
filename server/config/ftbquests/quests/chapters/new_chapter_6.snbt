@@ -1,0 +1,36 @@
+{
+	autofocus_id: "5E266F4752B25046"
+	default_hide_dependency_lines: false
+	default_quest_shape: ""
+	filename: "new_chapter_6"
+	group: ""
+	icon: "arphex:tormentor_egg"
+	id: "0C71500BD67F8D0F"
+	order_index: 5
+	quest_links: [ ]
+	quests: [{
+		dependencies: ["3645BFEC572CE6C4"]
+		hide_dependency_lines: true
+		hide_until_deps_complete: true
+		id: "5E266F4752B25046"
+		rewards: [{
+			id: "23D01F3FCB57C43B"
+			type: "xp_levels"
+			xp_levels: 1
+		}]
+		shape: "hexagon"
+		size: 2.0d
+		tasks: [{
+			icon: "arphex:tormentor_egg"
+			id: "570088AC77B75AE8"
+			stat: "minecraft:play_time"
+			title: "&kI CAN SEE YOU"
+			type: "stat"
+			value: 1
+		}]
+		title: "Coming Soon..."
+		x: 0.0d
+		y: 0.0d
+	}]
+	title: "The End of All Things"
+}

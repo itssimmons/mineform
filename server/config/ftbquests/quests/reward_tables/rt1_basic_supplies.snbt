@@ -1,0 +1,18 @@
+{
+	id: "67A0DD724D80894B"
+	loot_size: 1
+	order_index: 0
+	rewards: [
+		{ count: 7, item: "minecraft:bread" }
+		{ count: 3, item: "minecraft:cooked_beef" }
+		{ count: 18, item: "minecraft:torch" }
+		{ count: 14, item: "minecraft:iron_nugget" }
+		{ count: 9, item: "minecraft:coal" }
+		{ count: 6, item: "minecraft:stick" }
+		{ count: 4, item: "minecraft:apple" }
+		{ count: 8, item: "minecraft:oak_log" }
+		{ count: 11, item: "minecraft:bone" }
+	]
+	title: "RT1 Basic Supplies"
+	use_title: true
+}

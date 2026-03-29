@@ -1,0 +1,667 @@
+{
+	autofocus_id: "15AFA7FF2202826D"
+	default_hide_dependency_lines: false
+	default_quest_shape: ""
+	filename: "new_chapter_2"
+	group: ""
+	icon: "arphex:scorpioid_bloodluster_egg"
+	id: "339597C9FA298C5A"
+	order_index: 1
+	quest_links: [ ]
+	quests: [
+		{
+			dependencies: ["617BE7D2B2427CBA"]
+			hide_dependency_lines: true
+			hide_until_deps_complete: true
+			id: "15AFA7FF2202826D"
+			rewards: [{
+				id: "792494CC86466D4A"
+				item: "minecraft:golden_apple"
+				type: "item"
+			}]
+			shape: "hexagon"
+			size: 2.0d
+			tasks: [{
+				id: "58C3FFC3E4F08CA2"
+				item: "arphex:crawling_compass"
+				type: "item"
+			}]
+			title: "A Door in the Dirt"
+			x: 0.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["15AFA7FF2202826D"]
+			description: ["Use the Crawling Compass to find the castle"]
+			hide_dependency_lines: true
+			hide_until_deps_complete: true
+			icon: "arphex:crawling_barrier"
+			id: "0CCE5EA1C7540EF0"
+			rewards: [{
+				exclude_from_claim_all: true
+				id: "7A01B28A215E1EF8"
+				table_id: 7467211665176561995L
+				type: "random"
+			}]
+			tasks: [{
+				icon: "arphex:crawling_barrier"
+				id: "52A508ABB819614C"
+				structure: "arphex:crawling_castle"
+				title: "Find the Crawling Castle"
+				type: "structure"
+			}]
+			title: "The Walls Answer Back"
+			x: 1.0d
+			y: -2.5d
+		}
+		{
+			dependencies: ["0CCE5EA1C7540EF0"]
+			description: ["To activate the portal, get into the central sphere made out of Crawling Barrier Blocks. Light each of the four Crawling Pillar blocks on fire with Scorch Charge and then right-click the central Crawling Altar block with an Abyssal Crystal"]
+			hide_until_deps_complete: true
+			id: "0EED6C38733A1375"
+			rewards: [{
+				exclude_from_claim_all: true
+				id: "35D16B1A289224FF"
+				table_id: 132122336435770860L
+				type: "random"
+			}]
+			tasks: [{
+				advancement: "arphex:crawling_portal_activated"
+				criterion: ""
+				icon: "arphex:crawling_portal"
+				id: "3CE9CA0971F322F5"
+				title: "Open the portal to the Crawling Dimension"
+				type: "advancement"
+			}]
+			title: "Rot Beneath The World"
+			x: 3.0d
+			y: -4.0d
+		}
+		{
+			dependencies: ["0EED6C38733A1375"]
+			description: ["The Cryptic Complex biome can be found in the second layer of the Crawling Dimension"]
+			hide_until_deps_complete: true
+			icon: "arphex:crawling_clay"
+			id: "034B64E091BDA1E7"
+			rewards: [{
+				exclude_from_claim_all: true
+				id: "2FF1A00F8D1C4F2D"
+				table_id: 4271116057289917051L
+				type: "random"
+			}]
+			tasks: [{
+				biome: "arphex:cryptic_complex"
+				icon: "arphex:crawling_clay"
+				id: "7663A36EE0F9A5AE"
+				title: "Find a Cryptic Complex biome"
+				type: "biome"
+			}]
+			title: "Something Cryptic"
+			x: 0.0d
+			y: -4.0d
+		}
+		{
+			dependencies: ["034B64E091BDA1E7"]
+			hide_until_deps_complete: true
+			id: "18CBCB017815845A"
+			rewards: [{
+				exclude_from_claim_all: true
+				id: "704645964A3A68A2"
+				table_id: 8637294547976703744L
+				type: "random"
+			}]
+			tasks: [{
+				id: "09D78F89A102596F"
+				item: "arphex:heavy_chitin"
+				type: "item"
+			}]
+			title: "Colossus Beneath"
+			x: -1.0d
+			y: -6.0d
+		}
+		{
+			dependencies: ["18CBCB017815845A"]
+			hide_until_deps_complete: true
+			id: "0BB55058A81C4FDC"
+			rewards: [{
+				exclude_from_claim_all: true
+				id: "4BC5C5F77BB78847"
+				table_id: 600189917588052448L
+				type: "random"
+			}]
+			tasks: [{
+				id: "63CD6EC4BFEB3FBF"
+				item: {
+					Count: 1
+					id: "arphex:juggernaut_boots"
+					tag: {
+						Damage: 0
+					}
+				}
+				type: "item"
+			}]
+			title: "Better Material"
+			x: -2.0d
+			y: -3.5d
+		}
+		{
+			dependencies: ["0BB55058A81C4FDC"]
+			hide_until_deps_complete: true
+			id: "1AC9D2A0231A56BD"
+			rewards: [{
+				exclude_from_claim_all: true
+				id: "7472948B1CA7A8E3"
+				table_id: 8576830115559125286L
+				type: "random"
+			}]
+			tasks: [
+				{
+					id: "63DABFDBCF653559"
+					item: {
+						Count: 1
+						id: "arphex:juggernaut_helmet"
+						tag: {
+							Damage: 0
+						}
+					}
+					type: "item"
+				}
+				{
+					id: "28A9B7657BE9B9AA"
+					item: {
+						Count: 1
+						id: "arphex:juggernaut_chestplate"
+						tag: {
+							Damage: 0
+						}
+					}
+					type: "item"
+				}
+				{
+					id: "506C5E78A5EF2BC8"
+					item: {
+						Count: 1
+						id: "arphex:juggernaut_leggings"
+						tag: {
+							Damage: 0
+						}
+					}
+					type: "item"
+				}
+			]
+			title: "Armor of the Deep"
+			x: -4.0d
+			y: -2.0d
+		}
+		{
+			dependencies: ["1AC9D2A0231A56BD"]
+			hide_until_deps_complete: true
+			id: "2EF51571632B5DF8"
+			rewards: [{
+				exclude_from_claim_all: true
+				id: "12CF96BFA55D61C0"
+				table_id: 3537712596570730422L
+				type: "random"
+			}]
+			tasks: [{
+				advancement: "apollyon:thats_not_an_enderman"
+				criterion: ""
+				id: "5B1B8FD6EA3F5091"
+				title: "Observe The Fallen from up close"
+				type: "advancement"
+			}]
+			title: "That's Not an Enderman"
+			x: -3.5d
+			y: 0.0d
+		}
+		{
+			dependencies: ["597875E099A39120"]
+			hide_until_deps_complete: true
+			icon: "apollyon:the_damned_spawn_egg"
+			id: "4F62267BF2997E40"
+			rewards: [{
+				exclude_from_claim_all: true
+				id: "2023A308C29D643F"
+				table_id: 3537712596570730422L
+				type: "random"
+			}]
+			tasks: [{
+				icon: "apollyon:the_damned_spawn_egg"
+				id: "561AEB8861E19C57"
+				observe_type: 5
+				timer: 0L
+				title: "Observe The Damned from up close"
+				to_observe: "apollyon:the_damned"
+				type: "observation"
+			}]
+			title: "The Damned Walks Again"
+			x: 1.5d
+			y: 2.5d
+		}
+		{
+			dependencies: ["2EF51571632B5DF8"]
+			hide_dependency_lines: true
+			hide_until_deps_complete: true
+			id: "415BB48179B84D76"
+			rewards: [{
+				exclude_from_claim_all: true
+				id: "4523121FF88AC0C6"
+				table_id: 7467211665176561995L
+				type: "random"
+			}]
+			tasks: [{
+				id: "3F8DB2E224877DED"
+				item: "weeping_angels:timey_wimey_detector"
+				type: "item"
+			}]
+			title: "Distortions in Time"
+			x: -4.5d
+			y: 2.0d
+		}
+		{
+			dependencies: ["415BB48179B84D76"]
+			hide_until_deps_complete: true
+			id: "0B2BC6018DBC7391"
+			rewards: [{
+				exclude_from_claim_all: true
+				id: "1E19E09678DAEE27"
+				table_id: 132122336435770860L
+				type: "random"
+			}]
+			tasks: [{
+				id: "54A1866FD96B8E55"
+				item: "ls_spooky_foods:sculk_steak"
+				type: "item"
+			}]
+			title: "Echo-Cooked Flesh"
+			x: -2.5d
+			y: 2.0d
+		}
+		{
+			dependencies: ["0B2BC6018DBC7391"]
+			hide_until_deps_complete: true
+			id: "1C981262BB086703"
+			rewards: [{
+				exclude_from_claim_all: true
+				id: "6621A741BC5674BB"
+				table_id: 8637294547976703744L
+				type: "random"
+			}]
+			tasks: [{
+				advancement: "graveyard:graveyard/kill_graveyard_mob"
+				criterion: ""
+				id: "6D4ECBAAF574F563"
+				title: "Kill any Graveyard mob"
+				type: "advancement"
+			}]
+			title: "Something Won't Stay Buried"
+			x: -4.0d
+			y: 4.0d
+		}
+		{
+			dependencies: ["1C981262BB086703"]
+			hide_until_deps_complete: true
+			id: "0A4D52E96B2DF5CF"
+			rewards: [{
+				id: "465856632DDE28FE"
+				item: {
+					Count: 1
+					id: "minecraft:potion"
+					tag: {
+						Potion: "minecraft:invisibility"
+					}
+				}
+				type: "item"
+			}]
+			tasks: [{
+				advancement: "the_obsessed:first_impressions"
+				criterion: ""
+				id: "4AC47DD86425F695"
+				title: "First Impressions"
+				type: "advancement"
+			}]
+			title: "You Have Its Attention"
+			x: -2.0d
+			y: 5.0d
+		}
+		{
+			dependencies: ["0A4D52E96B2DF5CF"]
+			hide_until_deps_complete: true
+			id: "597875E099A39120"
+			rewards: [{
+				id: "32679CF71DC1AACE"
+				type: "xp"
+				xp: 67
+			}]
+			tasks: [{
+				id: "7D5C6EE35D194CE2"
+				item: "the_obsessed:lenny_plushie"
+				type: "item"
+			}]
+			title: "Stitched with Madness"
+			x: -0.5d
+			y: 3.5d
+		}
+		{
+			dependencies: ["4F62267BF2997E40"]
+			description: ["Recommended biomes to find Scorpion Strikers are Basalt Deltas, Soul Sand Valley, Nether Wastes and Crimson Forest"]
+			hide_until_deps_complete: true
+			id: "6580DD6DCE61C046"
+			rewards: [{
+				exclude_from_claim_all: true
+				id: "1DE61B225237C521"
+				table_id: 600189917588052448L
+				type: "random"
+			}]
+			tasks: [{
+				entity: "arphex:scorpion_striker"
+				icon: "arphex:scorpion_striker_egg"
+				id: "68747F6830560B62"
+				type: "kill"
+				value: 2L
+			}]
+			title: "Venom in the Rock"
+			x: 2.5d
+			y: -0.5d
+		}
+		{
+			dependencies: ["6580DD6DCE61C046"]
+			hide_until_deps_complete: true
+			id: "12D659683EBC3E95"
+			rewards: [{
+				exclude_from_claim_all: true
+				id: "01991613FE507BE7"
+				table_id: 7467211665176561995L
+				type: "random"
+			}]
+			tasks: [{
+				count: 4L
+				id: "1CA0908D567A3B05"
+				item: { Count: 4, id: "arphex:venomous_appendage" }
+				type: "item"
+			}]
+			title: "Poisoned Limb"
+			x: 4.5d
+			y: -1.5d
+		}
+		{
+			dependencies: ["499321FE43C98702"]
+			hide_until_deps_complete: true
+			id: "2952B6D3BE257B38"
+			rewards: [{
+				exclude_from_claim_all: true
+				id: "6F8D7B31D82B9A4D"
+				table_id: 4271116057289917051L
+				type: "random"
+			}]
+			tasks: [{
+				id: "5F5A39BE8839A46D"
+				item: "arphex:mangled_scorpion_flesh"
+				type: "item"
+			}]
+			title: "Rise of the Scorpioid"
+			x: 7.5d
+			y: 1.0d
+		}
+		{
+			dependencies: ["2D1BA4F0B33D790D"]
+			hide_until_deps_complete: true
+			id: "29BCB4DAED593644"
+			rewards: [{
+				exclude_from_claim_all: true
+				id: "00F66ABD1E0E05A6"
+				table_id: 3168287151242619399L
+				type: "choice"
+			}]
+			tasks: [{
+				entity: "arphex:scorpioid_bloodluster"
+				icon: "arphex:scorpioid_bloodluster_egg"
+				id: "5379E07F564CE16E"
+				title: "Kill the Scorpioid Bloodluster boss"
+				type: "kill"
+				value: 1L
+			}]
+			title: "Molten Devastation"
+			x: 6.5d
+			y: 3.0d
+		}
+		{
+			dependencies: ["29BCB4DAED593644"]
+			hide_until_deps_complete: true
+			id: "53F988CB691070A8"
+			rewards: [{
+				exclude_from_claim_all: true
+				id: "1D50CF888ACFC041"
+				table_id: 1486905368855104270L
+				type: "random"
+			}]
+			tasks: [{
+				id: "70D4DF0CD5CF4CF4"
+				item: "arphex:fire_opal"
+				type: "item"
+			}]
+			title: "Fire Opal Core"
+			x: 4.5d
+			y: 1.0d
+		}
+		{
+			dependencies: ["12D659683EBC3E95"]
+			hide_until_deps_complete: true
+			id: "499321FE43C98702"
+			rewards: [{
+				exclude_from_claim_all: true
+				id: "00F668BAD1BC4121"
+				table_id: 4271116057289917051L
+				type: "random"
+			}]
+			tasks: [{
+				id: "18B53E846CE7F29E"
+				item: "arphex:formic_fireblaster"
+				type: "item"
+			}]
+			title: "Burn the Swarm"
+			x: 6.5d
+			y: -1.0d
+		}
+		{
+			dependencies: ["3745FADDA90D8BB3"]
+			id: "4B3234D7E4B379DE"
+			rewards: [{
+				exclude_from_claim_all: true
+				id: "7D103D0E7ACDFB99"
+				table_id: 600189917588052448L
+				type: "random"
+			}]
+			tasks: [{
+				id: "6A18E3A415C2816C"
+				item: "arphex:staff_of_vitality"
+				type: "item"
+			}]
+			title: "Life in Your Hands"
+			x: 1.5d
+			y: -8.0d
+		}
+		{
+			dependencies: ["3417A098B01C1558"]
+			id: "3745FADDA90D8BB3"
+			rewards: [{
+				exclude_from_claim_all: true
+				id: "77514F3AA8442DCE"
+				table_id: 132122336435770860L
+				type: "random"
+			}]
+			tasks: [{
+				count: 4L
+				id: "1B1EB4639A19DD1D"
+				item: "arphex:fire_opal_shard"
+				type: "item"
+			}]
+			title: "Shards of Molten Fury"
+			x: 3.5d
+			y: -7.0d
+		}
+		{
+			dependencies: ["53F988CB691070A8"]
+			hide_dependency_lines: true
+			id: "72300740667DD760"
+			rewards: [{
+				exclude_from_claim_all: true
+				id: "5E69D23C23BE8F04"
+				table_id: 3537712596570730422L
+				type: "random"
+			}]
+			tasks: [{
+				id: "4B86EED18A7B0EE4"
+				item: "arphex:infernal_shard"
+				type: "item"
+			}]
+			title: "The Molten Relic"
+			x: 5.5d
+			y: -3.5d
+		}
+		{
+			dependencies: ["72300740667DD760"]
+			id: "3417A098B01C1558"
+			rewards: [{
+				exclude_from_claim_all: true
+				id: "5DB85CE8219E6D57"
+				table_id: 4271116057289917051L
+				type: "random"
+			}]
+			tasks: [{
+				id: "4F7ACAE7DE3F1E96"
+				item: "arphex:infernal_ingot"
+				type: "item"
+			}]
+			title: "Heat Without Flame"
+			x: 5.0d
+			y: -5.5d
+		}
+		{
+			dependencies: ["4B3234D7E4B379DE"]
+			id: "6380AB8C0814E6A7"
+			rewards: [{
+				exclude_from_claim_all: true
+				id: "1555FF32F7428FAD"
+				table_id: 7467211665176561995L
+				type: "random"
+			}]
+			tasks: [{
+				entity: "born_in_chaos_v1:restless_spirit"
+				icon: "born_in_chaos_v1:restless_spirit_spawn_egg"
+				id: "2AC95D557864097B"
+				type: "kill"
+				value: 2L
+			}]
+			title: "A Spirit Laid to Rest"
+			x: -1.0d
+			y: -8.5d
+		}
+		{
+			dependencies: ["6380AB8C0814E6A7"]
+			id: "42488D122F0C9863"
+			rewards: [{
+				exclude_from_claim_all: true
+				id: "52782FA17C1AC7AC"
+				table_id: 7467211665176561995L
+				type: "random"
+			}]
+			tasks: [{
+				id: "0007E3399D75AD6F"
+				item: "born_in_chaos_v1:fused_bone"
+				type: "item"
+			}]
+			title: "Bones That Shouldn't Be One"
+			x: -2.5d
+			y: -7.0d
+		}
+		{
+			dependencies: ["42488D122F0C9863"]
+			id: "71AD28E9061FCF28"
+			rewards: [{
+				exclude_from_claim_all: true
+				id: "67FDDA4D5968D4F6"
+				table_id: 8637294547976703744L
+				type: "random"
+			}]
+			tasks: [{
+				id: "5A025763B213775E"
+				item: "born_in_chaos_v1:bone_heart"
+				type: "item"
+			}]
+			title: "A Second Chance"
+			x: -5.0d
+			y: -6.0d
+		}
+		{
+			dependencies: ["71AD28E9061FCF28"]
+			id: "6690276F9474A73F"
+			rewards: [{
+				exclude_from_claim_all: true
+				id: "6B45AD4C8593D4AA"
+				table_id: 8576830115559125286L
+				type: "random"
+			}]
+			tasks: [{
+				advancement: "born_in_chaos_v1:lifeturnedouttobeacomedy"
+				criterion: ""
+				id: "40C617829D94E1FD"
+				title: "Kill: 1x Zombie Clown"
+				type: "advancement"
+			}]
+			title: "No One Is Laughing"
+			x: -5.5d
+			y: -4.0d
+		}
+		{
+			dependencies: ["6690276F9474A73F"]
+			id: "4897AB66B640A9A2"
+			rewards: [{
+				exclude_from_claim_all: true
+				id: "781B80612F4EB1BE"
+				table_id: 7467211665176561995L
+				type: "random"
+			}]
+			tasks: [{
+				entity: "born_in_chaos_v1:corpse_fly"
+				icon: "alexsmobs:spawn_egg_fly"
+				id: "13841DEE84A9EF94"
+				type: "kill"
+				value: 1L
+			}]
+			title: "The Swarm Begins"
+			x: -6.0d
+			y: -1.5d
+		}
+		{
+			dependencies: ["2952B6D3BE257B38"]
+			description: [
+				"You can summon the Scorpioid Bloodluster boss by placing a Soul Sand block on top of a Mangled Scorpion Flesh block and lighting it on fire. You need to have the Bane Of The Darkness in your inventory."
+				""
+				"Recommended weapon: Bow or Abyssal Blade"
+				""
+				"Recommended armor: Tier 3 Chitin or Juggernaut"
+			]
+			hide_until_deps_complete: true
+			id: "2D1BA4F0B33D790D"
+			rewards: [{
+				exclude_from_claim_all: true
+				id: "052159422F5580A1"
+				table_id: 3537712596570730422L
+				type: "random"
+			}]
+			tasks: [{
+				advancement: "arphex:scorpioid_summon"
+				criterion: ""
+				icon: "arphex:spider_moth_summoner"
+				id: "61FB151C9547EF62"
+				title: "Summon the Scorpioid Bloodluster boss"
+				type: "advancement"
+			}]
+			title: "The Sky Slowly Opens"
+			x: 8.0d
+			y: 2.5d
+		}
+	]
+	title: "The Knocking Below"
+}

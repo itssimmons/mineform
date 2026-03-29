@@ -25,12 +25,10 @@ bukkit.yml
 spigot.yml
 paper-global.yml
 paper-world-defaults.yml
-config/
 cache/
 
 # Java / JVM files
 *.class
-*.jar
 *.log
 
 # Session / temporary files

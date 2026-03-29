@@ -1,0 +1,16 @@
+{
+	id: "7707058C50C63126"
+	loot_size: 1
+	order_index: 7
+	rewards: [
+		{ item: "minecraft:compass" }
+		{ item: "minecraft:map" }
+		{ count: 7, item: "minecraft:paper" }
+		{ count: 3, item: "minecraft:ink_sac" }
+		{ item: "minecraft:clock" }
+		{ item: "minecraft:spyglass" }
+		{ count: 3, item: "minecraft:bread" }
+	]
+	title: "RT4 Exploration Kit"
+	use_title: true
+}

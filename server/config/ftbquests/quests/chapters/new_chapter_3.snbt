@@ -1,0 +1,651 @@
+{
+	autofocus_id: "28C694C7E2778D51"
+	default_hide_dependency_lines: false
+	default_quest_shape: ""
+	filename: "new_chapter_3"
+	group: ""
+	icon: "arphex:draconic_voidlasher_egg"
+	id: "61782AF4E4C0E1BF"
+	order_index: 2
+	quest_links: [ ]
+	quests: [
+		{
+			dependencies: ["4897AB66B640A9A2"]
+			hide_dependency_lines: true
+			hide_until_deps_complete: true
+			id: "28C694C7E2778D51"
+			rewards: [{
+				id: "5C6BFE05E7C1DF22"
+				item: "minecraft:golden_apple"
+				type: "item"
+			}]
+			shape: "hexagon"
+			size: 2.0d
+			tasks: [{
+				id: "33FD97A128BA719B"
+				item: "creepydecorations:broken_doll"
+				type: "item"
+			}]
+			title: "The Doll Watches"
+			x: 0.0d
+			y: -1.0d
+		}
+		{
+			dependencies: ["76F1B24C5BC2AECB"]
+			hide_dependency_lines: true
+			hide_until_deps_complete: true
+			id: "5E7EBC439FBFFAD3"
+			rewards: [{
+				exclude_from_claim_all: true
+				id: "2082522F8400D812"
+				table_id: 3537712596570730422L
+				type: "random"
+			}]
+			tasks: [{
+				count: 4L
+				id: "1221332AF216D492"
+				item: { Count: 3, id: "arphex:infernal_ingot" }
+				type: "item"
+			}]
+			title: "Infernal Reserves"
+			x: 1.0d
+			y: -3.5d
+		}
+		{
+			dependencies: ["5E7EBC439FBFFAD3"]
+			hide_until_deps_complete: true
+			id: "1042DD4423FCED6F"
+			rewards: [{
+				exclude_from_claim_all: true
+				id: "5C56465480C15E8B"
+				table_id: 8637294547976703744L
+				type: "random"
+			}]
+			tasks: [{
+				id: "5F39E8899DAF57B7"
+				item: {
+					Count: 1
+					id: "arphex:infernal_helmet"
+					tag: {
+						Damage: 0
+					}
+				}
+				type: "item"
+			}]
+			title: "Crown of the Inferno"
+			x: 0.5d
+			y: -5.5d
+		}
+		{
+			dependencies: ["1042DD4423FCED6F"]
+			hide_until_deps_complete: true
+			id: "7B9A5D24B0F6C1A0"
+			rewards: [{
+				exclude_from_claim_all: true
+				id: "6F287243CEA8C5F7"
+				table_id: 132122336435770860L
+				type: "random"
+			}]
+			tasks: [{
+				id: "62B6F3F7AD32F630"
+				item: {
+					Count: 1
+					id: "arphex:infernal_chestplate"
+					tag: {
+						Damage: 0
+					}
+				}
+				type: "item"
+			}]
+			title: "Carapace of Flame"
+			x: -1.5d
+			y: -4.5d
+		}
+		{
+			dependencies: ["7B9A5D24B0F6C1A0"]
+			hide_until_deps_complete: true
+			id: "67FDDC0C85AC3E96"
+			rewards: [{
+				exclude_from_claim_all: true
+				id: "6CEC28296336A5A3"
+				table_id: 3537712596570730422L
+				type: "random"
+			}]
+			tasks: [{
+				id: "279646EDA9609E2F"
+				item: {
+					Count: 1
+					id: "arphex:infernal_leggings"
+					tag: {
+						Damage: 0
+					}
+				}
+				type: "item"
+			}]
+			title: "Leggings of the Abyss"
+			x: -3.5d
+			y: -5.5d
+		}
+		{
+			dependencies: ["67FDDC0C85AC3E96"]
+			hide_until_deps_complete: true
+			id: "53D982E118022C4D"
+			rewards: [{
+				exclude_from_claim_all: true
+				id: "312BE3826622BCEF"
+				table_id: 600189917588052448L
+				type: "random"
+			}]
+			tasks: [{
+				id: "3CBDC0AF03A75374"
+				item: {
+					Count: 1
+					id: "arphex:infernal_boots"
+					tag: {
+						Damage: 0
+					}
+				}
+				type: "item"
+			}]
+			title: "Steps Through Fire"
+			x: -3.5d
+			y: -3.5d
+		}
+		{
+			dependencies: ["60AE7B214605C32D"]
+			hide_until_deps_complete: true
+			id: "3311EA4D1346A11D"
+			rewards: [{
+				exclude_from_claim_all: true
+				id: "62DD99355A0140A5"
+				table_id: 7467211665176561995L
+				type: "random"
+			}]
+			tasks: [{
+				id: "3D9242EA162B18B1"
+				item: {
+					Count: 1
+					id: "farmersdelight:skillet"
+					tag: {
+						Damage: 0
+					}
+				}
+				type: "item"
+			}]
+			title: "Steel in the Kitchen"
+			x: 5.0d
+			y: 0.5d
+		}
+		{
+			dependencies: ["3311EA4D1346A11D"]
+			hide_until_deps_complete: true
+			id: "353191849AB73BD1"
+			rewards: [{
+				exclude_from_claim_all: true
+				id: "5BE333E6E9DDB9A9"
+				table_id: 132122336435770860L
+				type: "random"
+			}]
+			tasks: [{
+				id: "5AD1BC4997023719"
+				item: "farmersdelight:cooking_pot"
+				type: "item"
+			}]
+			title: "Pot of Plenty"
+			x: 2.0d
+			y: 1.0d
+		}
+		{
+			dependencies: ["28C694C7E2778D51"]
+			hide_dependency_lines: true
+			hide_until_deps_complete: true
+			id: "60AE7B214605C32D"
+			rewards: [{
+				exclude_from_claim_all: true
+				id: "22BAE673116A6769"
+				table_id: 7467211665176561995L
+				type: "random"
+			}]
+			tasks: [{
+				id: "06CC824D739CD724"
+				item: "farmersdelight:stove"
+				type: "item"
+			}]
+			title: "The Heat of Survival"
+			x: 3.5d
+			y: -1.0d
+		}
+		{
+			dependencies: ["353191849AB73BD1"]
+			hide_until_deps_complete: true
+			id: "113913C0D042EF38"
+			rewards: [{
+				exclude_from_claim_all: true
+				id: "7EFCAC4719855677"
+				table_id: 4271116057289917051L
+				type: "random"
+			}]
+			tasks: [{
+				id: "4B5FFDFD465CD70F"
+				item: "farmersdelight:tomato_sauce"
+				type: "item"
+			}]
+			title: "Sauce of the Harvest"
+			x: 0.0d
+			y: 2.5d
+		}
+		{
+			dependencies: ["113913C0D042EF38"]
+			hide_until_deps_complete: true
+			id: "0779E3D44587CAE1"
+			rewards: [{
+				exclude_from_claim_all: true
+				id: "6EF9CB4CFE9FB950"
+				table_id: 8576830115559125286L
+				type: "random"
+			}]
+			tasks: [{
+				id: "056B5D3EE0E2E5E3"
+				item: "farmersdelight:pasta_with_meatballs"
+				type: "item"
+			}]
+			title: "Meal Before the Storm"
+			x: -2.5d
+			y: 2.0d
+		}
+		{
+			dependencies: ["7BE1A8E409AE6844"]
+			hide_until_deps_complete: true
+			id: "75EADAB88A129B34"
+			rewards: [{
+				exclude_from_claim_all: true
+				id: "73A85D83A2630005"
+				table_id: 132122336435770860L
+				type: "random"
+			}]
+			tasks: [{
+				id: "19B57C9FA53BA623"
+				item: "farmersrespite:kettle"
+				type: "item"
+			}]
+			title: "Boil the Darkness"
+			x: 4.0d
+			y: 3.0d
+		}
+		{
+			dependencies: ["75EADAB88A129B34"]
+			hide_until_deps_complete: true
+			id: "69BDC211511FFC01"
+			rewards: [{
+				exclude_from_claim_all: true
+				id: "3630ADE5D6E6D498"
+				table_id: 4271116057289917051L
+				type: "random"
+			}]
+			tasks: [{
+				id: "38C7D949C1293C5C"
+				item: "farmersrespite:strong_apple_cider"
+				type: "item"
+			}]
+			title: "Cider of the Orchard"
+			x: 2.0d
+			y: 4.5d
+		}
+		{
+			dependencies: ["3311EA4D1346A11D"]
+			hide_until_deps_complete: true
+			id: "7BE1A8E409AE6844"
+			rewards: [{
+				exclude_from_claim_all: true
+				id: "11F82DF303B65F43"
+				table_id: 7467211665176561995L
+				type: "random"
+			}]
+			tasks: [{
+				id: "7F1118EEF987D51C"
+				item: "ls_spooky_foods:ender_egg"
+				type: "item"
+			}]
+			title: "Egg of the End"
+			x: 6.5d
+			y: 2.5d
+		}
+		{
+			dependencies: ["6A9940A9CD3F8DAD"]
+			hide_until_deps_complete: true
+			id: "1936DB06739F0BE8"
+			rewards: [{
+				exclude_from_claim_all: true
+				id: "1F6970ECB0A05BB2"
+				table_id: 4271116057289917051L
+				type: "random"
+			}]
+			tasks: [{
+				id: "6F2DFE34794AB3B2"
+				item: "arphex:mangled_fly_flesh"
+				type: "item"
+			}]
+			title: "Mangled Offering"
+			x: -7.5d
+			y: 0.5d
+		}
+		{
+			dependencies: ["1936DB06739F0BE8"]
+			description: [
+				"You can summon the Draconic Voidlasher boss by placing a Soul Sand block on top of a Mangled Fly Flesh block and lighting it on fire. You need to have the Bane Of The Darkness in your inventory."
+				""
+				"Recommended weapon: Judgement Blaster or Hypnotic Hellblaster"
+				""
+				"Recommended armor: Infernal"
+			]
+			hide_until_deps_complete: true
+			id: "56969C31F6B7D36D"
+			rewards: [{
+				exclude_from_claim_all: true
+				id: "6BAF43E9B14D791C"
+				table_id: 3537712596570730422L
+				type: "random"
+			}]
+			tasks: [{
+				advancement: "arphex:voidlasher_summon"
+				criterion: ""
+				icon: "arphex:spider_moth_summoner"
+				id: "21012D7566286407"
+				title: "Summon the Draconic Voidlasher boss"
+				type: "advancement"
+			}]
+			title: "The Sky Breaks Open"
+			x: -10.0d
+			y: 1.0d
+		}
+		{
+			dependencies: ["75296F1000FC1BEE"]
+			hide_until_deps_complete: true
+			id: "0739D2EB8816FCA8"
+			rewards: [{
+				exclude_from_claim_all: true
+				id: "18637E383DD9F3BA"
+				table_id: 1486905368855104270L
+				type: "random"
+			}]
+			tasks: [{
+				id: "310EE17BCA89AA76"
+				item: "arphex:void_geode"
+				type: "item"
+			}]
+			title: "Heart of the Void"
+			x: -11.5d
+			y: -5.5d
+		}
+		{
+			dependencies: ["56969C31F6B7D36D"]
+			hide_until_deps_complete: true
+			id: "700556EE69500EFA"
+			rewards: [{
+				exclude_from_claim_all: true
+				id: "71B9500C5CA94434"
+				table_id: 697506354525479228L
+				type: "choice"
+			}]
+			tasks: [{
+				entity: "arphex:draconic_voidlasher"
+				icon: "arphex:draconic_voidlasher_egg"
+				id: "52A1EC0907702249"
+				title: "Kill the Draconic Voidlasher boss"
+				type: "kill"
+				value: 1L
+			}]
+			title: "Dragon of the Void"
+			x: -11.5d
+			y: -1.0d
+		}
+		{
+			dependencies: ["700556EE69500EFA"]
+			hide_until_deps_complete: true
+			id: "75296F1000FC1BEE"
+			rewards: [{
+				exclude_from_claim_all: true
+				id: "38A2D7A26655BB85"
+				table_id: 697506354525479228L
+				type: "choice"
+			}]
+			tasks: [{
+				advancement: "arphex:destroyer_of_suffering"
+				criterion: ""
+				id: "7466B873F363A5AA"
+				title: "THE TORMENTOR IS COMING"
+				type: "advancement"
+			}]
+			title: "The Third Seal Broken"
+			x: -11.0d
+			y: -3.5d
+		}
+		{
+			dependencies: ["6D8E983EF7314450"]
+			hide_until_deps_complete: true
+			id: "3732475B95B1F149"
+			rewards: [{
+				exclude_from_claim_all: true
+				id: "23151FEE0BB66334"
+				table_id: 4271116057289917051L
+				type: "random"
+			}]
+			tasks: [{
+				id: "16970A58CE41FD22"
+				item: "arphex:hypnotic_hellblaster"
+				type: "item"
+			}]
+			title: "Hypnotic Flame"
+			x: -7.0d
+			y: -2.5d
+		}
+		{
+			dependencies: ["3732475B95B1F149"]
+			hide_until_deps_complete: true
+			id: "6A9940A9CD3F8DAD"
+			rewards: [{
+				exclude_from_claim_all: true
+				id: "3D270A6732A390A5"
+				table_id: 3537712596570730422L
+				type: "random"
+			}]
+			tasks: [{
+				id: "5BB2903B0AFB3DC2"
+				item: "arphex:judgement_blaster"
+				type: "item"
+			}]
+			title: "Judgement Ignited"
+			x: -5.0d
+			y: 0.0d
+		}
+		{
+			dependencies: [
+				"0779E3D44587CAE1"
+				"69BDC211511FFC01"
+			]
+			hide_until_deps_complete: true
+			id: "1BB8AD0871542DC6"
+			rewards: [{
+				exclude_from_claim_all: true
+				id: "12BBFE4EFDD3732F"
+				table_id: 7467211665176561995L
+				type: "random"
+			}]
+			tasks: [{
+				id: "6D4E393F5097DA0A"
+				item: "dustydecorations:wedged_cleaver"
+				type: "item"
+			}]
+			title: "The Butcher's Tool"
+			x: -4.0d
+			y: 4.0d
+		}
+		{
+			dependencies: ["1BB8AD0871542DC6"]
+			hide_until_deps_complete: true
+			id: "76F1B24C5BC2AECB"
+			rewards: [{
+				exclude_from_claim_all: true
+				id: "1AD00738A58E0655"
+				table_id: 8576830115559125286L
+				type: "random"
+			}]
+			tasks: [{
+				id: "28870DA41C1B026F"
+				item: "dustydecorations:hanging_knives"
+				type: "item"
+			}]
+			title: "Blades on Display"
+			x: -6.0d
+			y: 2.5d
+		}
+		{
+			dependencies: ["0739D2EB8816FCA8"]
+			hide_dependency_lines: true
+			hide_until_deps_complete: true
+			id: "29267179CE38BEE2"
+			rewards: [{
+				exclude_from_claim_all: true
+				id: "7E071A8C14FD49C8"
+				table_id: 4271116057289917051L
+				type: "random"
+			}]
+			tasks: [{
+				id: "79332AE890919057"
+				item: "arphex:abyssal_annihilator"
+				type: "item"
+			}]
+			title: "Weapon of Annihilation"
+			x: 4.0d
+			y: -4.0d
+		}
+		{
+			dependencies: ["29267179CE38BEE2"]
+			description: ["Spider Recluse can spawn anywhere underground"]
+			hide_until_deps_complete: true
+			id: "721D6AF6C9E8B43F"
+			rewards: [{
+				exclude_from_claim_all: true
+				id: "34AD4EFBA9ABE8DB"
+				table_id: 600189917588052448L
+				type: "random"
+			}]
+			tasks: [{
+				entity: "arphex:spider_recluse"
+				icon: "arphex:spider_recluse_egg"
+				id: "70BB3B4AE231654E"
+				type: "kill"
+				value: 1L
+			}]
+			title: "The Recluse Lurks"
+			x: 6.5d
+			y: -2.5d
+		}
+		{
+			dependencies: ["721D6AF6C9E8B43F"]
+			description: ["Recommended biomes to find Spider Goliath are Jungles and Lush Caves"]
+			hide_until_deps_complete: true
+			id: "385196460D25C1FB"
+			rewards: [{
+				exclude_from_claim_all: true
+				id: "4095ABE1BED5A206"
+				table_id: 600189917588052448L
+				type: "random"
+			}]
+			tasks: [{
+				entity: "arphex:spider_goliath"
+				icon: "arphex:spider_goliath_egg"
+				id: "195C69E4729A7BFC"
+				type: "kill"
+				value: 1L
+			}]
+			title: "The Goliath Falls"
+			x: 9.5d
+			y: -3.5d
+		}
+		{
+			dependencies: ["385196460D25C1FB"]
+			hide_until_deps_complete: true
+			id: "400DB40C4C6E3FB3"
+			rewards: [{
+				exclude_from_claim_all: true
+				id: "3D699829979B86BC"
+				table_id: 7467211665176561995L
+				type: "random"
+			}]
+			tasks: [{
+				id: "37D0E48C41995FFE"
+				item: "arphex:bug_spray"
+				type: "item"
+			}]
+			title: "Repel the Swarm"
+			x: 8.0d
+			y: -5.5d
+		}
+		{
+			dependencies: ["400DB40C4C6E3FB3"]
+			hide_until_deps_complete: true
+			id: "0593048E50806FDE"
+			rewards: [{
+				exclude_from_claim_all: true
+				id: "63B5768456B82527"
+				table_id: 3537712596570730422L
+				type: "random"
+			}]
+			tasks: [{
+				id: "48352BECD767E0E6"
+				item: "arphex:chaos_gauntlet"
+				type: "item"
+			}]
+			title: "Chaos in Your Hands"
+			x: 6.0d
+			y: -5.0d
+		}
+		{
+			dependencies: ["0593048E50806FDE"]
+			hide_until_deps_complete: true
+			id: "79F770801A8851E0"
+			rewards: [{
+				exclude_from_claim_all: true
+				id: "71AF688AD5E9EADC"
+				table_id: 3537712596570730422L
+				type: "random"
+			}]
+			tasks: [{
+				id: "33D923B9AB028AC4"
+				item: "born_in_chaos_v1:ethereal_spirit"
+				type: "item"
+			}]
+			title: "Spirit of the Beyond"
+			x: 3.0d
+			y: -7.0d
+		}
+		{
+			dependencies: ["53D982E118022C4D"]
+			description: [
+				"Centipede Evictor spawns from Centipede Evictor Larvae"
+				""
+				"Recommended biomes to find Centipede Evictor Larvaes are Soul Sand Valley, Nether Wastes and Crimson Forest"
+			]
+			hide_until_deps_complete: true
+			id: "6D8E983EF7314450"
+			rewards: [{
+				exclude_from_claim_all: true
+				id: "577E975857CFDDFD"
+				table_id: 600189917588052448L
+				type: "random"
+			}]
+			tasks: [{
+				entity: "arphex:centipede_evictor"
+				icon: "arphex:centipede_evictor_egg"
+				id: "60C62A3897403B7E"
+				type: "kill"
+				value: 2L
+			}]
+			title: "Evict the Evictors"
+			x: -6.0d
+			y: -4.5d
+		}
+	]
+	title: "Where the Sky Breaks"
+}

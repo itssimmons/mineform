@@ -1,0 +1,863 @@
+{
+	autofocus_id: "30618FB80BDA0659"
+	default_hide_dependency_lines: false
+	default_quest_shape: ""
+	filename: "new_chapter_1"
+	group: ""
+	icon: "arphex:spider_moth_egg"
+	id: "41B74CC1E44C08A8"
+	order_index: 0
+	quest_links: [ ]
+	quests: [
+		{
+			hide_dependency_lines: true
+			id: "30618FB80BDA0659"
+			rewards: [{
+				id: "37FE416EAA703508"
+				item: "minecraft:apple"
+				type: "item"
+			}]
+			shape: "hexagon"
+			size: 2.0d
+			tasks: [{
+				advancement: "endofherobrine:story/root"
+				criterion: ""
+				icon: "dustydecorations:wolf_skull"
+				id: "7BD1FC70E32362A1"
+				title: "The Forest Watches"
+				type: "advancement"
+			}]
+			x: 0.0d
+			y: 1.0d
+		}
+		{
+			dependencies: ["30618FB80BDA0659"]
+			hide_dependency_lines: true
+			hide_until_deps_complete: true
+			id: "22FDD9825E9B389E"
+			rewards: [
+				{
+					count: 2
+					id: "7AB0C7FC98B82AC4"
+					item: "minecraft:leather"
+					type: "item"
+				}
+				{
+					id: "55624C1C26902DD2"
+					item: "minecraft:beef"
+					type: "item"
+				}
+			]
+			tasks: [{
+				icon: "minecraft:clock"
+				id: "57ABDF3AA6D122C5"
+				stat: "minecraft:play_time"
+				title: "Survive one full day"
+				type: "stat"
+				value: 24000
+			}]
+			title: "Uneasy Silence"
+			x: -2.0d
+			y: -1.0d
+		}
+		{
+			dependencies: ["22FDD9825E9B389E"]
+			hide_until_deps_complete: true
+			id: "0AD01C224502ACDC"
+			rewards: [{
+				exclude_from_claim_all: true
+				id: "3B7D932FD9E98A5D"
+				table_id: 7467211665176561995L
+				type: "random"
+			}]
+			tasks: [{
+				id: "437E74929314DAF9"
+				item: {
+					Count: 1
+					id: "dixtas_armory:iron_longsword"
+					tag: {
+						Damage: 0
+					}
+				}
+				type: "item"
+			}]
+			title: "First Reinforcement"
+			x: -4.5d
+			y: -2.0d
+		}
+		{
+			dependencies: ["0AD01C224502ACDC"]
+			hide_until_deps_complete: true
+			id: "2CFD57F4C01D2F03"
+			rewards: [{
+				exclude_from_claim_all: true
+				id: "6AD85E939C0F636C"
+				table_id: 600189917588052448L
+				type: "random"
+			}]
+			tasks: [{
+				count: 4L
+				id: "2DD6B76FD2F2FCCA"
+				item: { Count: 4, id: "arphex:chitin" }
+				type: "item"
+			}]
+			title: "Chitin Fragments"
+			x: -3.0d
+			y: -3.5d
+		}
+		{
+			dependencies: ["2CFD57F4C01D2F03"]
+			description: ["Recommended biomes to find Ant Arsonists are Basalt Deltas and Crimson Forest"]
+			hide_until_deps_complete: true
+			id: "1147C7B573B7E984"
+			rewards: [{
+				exclude_from_claim_all: true
+				id: "1EB6C08332C59913"
+				table_id: 7467211665176561995L
+				type: "random"
+			}]
+			tasks: [{
+				entity: "arphex:ant_arsonist"
+				icon: "arphex:ant_arsonist_egg"
+				id: "5F957120A7A75BD6"
+				type: "kill"
+				value: 1L
+			}]
+			title: "Ants in the Ashes"
+			x: -5.5d
+			y: -4.0d
+		}
+		{
+			dependencies: ["1147C7B573B7E984"]
+			hide_until_deps_complete: true
+			id: "3DF797D21B7AE20C"
+			rewards: [{
+				exclude_from_claim_all: true
+				id: "438FEA049221594D"
+				table_id: 8637294547976703744L
+				type: "random"
+			}]
+			tasks: [{
+				count: 2L
+				id: "46B2D6C72FC53FC3"
+				item: { Count: 2, id: "arphex:burning_glands" }
+				type: "item"
+			}]
+			title: "Burning Remains"
+			x: -4.0d
+			y: -5.5d
+		}
+		{
+			dependencies: ["3DF797D21B7AE20C"]
+			hide_until_deps_complete: true
+			id: "16591A8BEA6DD9C3"
+			rewards: [{
+				exclude_from_claim_all: true
+				id: "13D0A9CAFBF33A8D"
+				table_id: 8576830115559125286L
+				type: "random"
+			}]
+			tasks: [{
+				icon: "endofherobrine:herobrine_head"
+				id: "74A98C10E266B95C"
+				observe_type: 5
+				timer: 0L
+				title: "Observe Herobrine from up close"
+				to_observe: "endofherobrine:lurker"
+				type: "observation"
+			}]
+			title: "The Whisper in the Trees"
+			x: -6.5d
+			y: -5.5d
+		}
+		{
+			dependencies: ["16591A8BEA6DD9C3"]
+			hide_until_deps_complete: true
+			id: "2E2029C0BA708FA1"
+			rewards: [{
+				exclude_from_claim_all: true
+				id: "146B2FA93DDF24BB"
+				table_id: 600189917588052448L
+				type: "random"
+			}]
+			tasks: [{
+				id: "434FAE124E9D5DC3"
+				item: {
+					Count: 1
+					id: "arphex:chitin_armour_helmet"
+					tag: {
+						Damage: 0
+					}
+				}
+				type: "item"
+			}]
+			title: "Feeling Stronger"
+			x: -6.5d
+			y: -7.5d
+		}
+		{
+			dependencies: ["2E2029C0BA708FA1"]
+			hide_until_deps_complete: true
+			id: "015E6AA56E99AD25"
+			rewards: [{
+				exclude_from_claim_all: true
+				id: "3570B28D68EC8C42"
+				table_id: 8576830115559125286L
+				type: "random"
+			}]
+			tasks: [{
+				advancement: "man:feelingwatched"
+				criterion: ""
+				icon: "man:tearoftheman"
+				id: "2E4B5B709145FC40"
+				title: "Feeling Watched"
+				type: "advancement"
+			}]
+			title: "Shadows in the Fog"
+			x: -8.5d
+			y: -5.5d
+		}
+		{
+			dependencies: ["015E6AA56E99AD25"]
+			hide_dependency_lines: true
+			hide_until_deps_complete: true
+			id: "4B2D5164E46C4AE3"
+			rewards: [{
+				exclude_from_claim_all: true
+				id: "52C1C48C2A0B8761"
+				table_id: 600189917588052448L
+				type: "random"
+			}]
+			tasks: [{
+				id: "0C2EE9126A6EB94E"
+				item: {
+					Count: 1
+					id: "arphex:chitin_armour_chestplate"
+					tag: {
+						Damage: 0
+					}
+				}
+				type: "item"
+			}]
+			title: "Exoskeleton Binding"
+			x: 2.0d
+			y: -1.0d
+		}
+		{
+			dependencies: ["4B2D5164E46C4AE3"]
+			description: ["Recommended biomes to find Centipede Stalkers are Basalt Deltas and Crimson Forest"]
+			hide_until_deps_complete: true
+			id: "3F7F03C30AF7A6D6"
+			rewards: [{
+				exclude_from_claim_all: true
+				id: "54CEB20CB827D061"
+				table_id: 4271116057289917051L
+				type: "random"
+			}]
+			tasks: [{
+				entity: "arphex:centipede_stalker"
+				icon: "arphex:centipede_stalker_egg"
+				id: "247319456C62670F"
+				type: "kill"
+				value: 1L
+			}]
+			title: "Mandible Strike"
+			x: 0.5d
+			y: -2.5d
+		}
+		{
+			dependencies: ["3F7F03C30AF7A6D6"]
+			hide_until_deps_complete: true
+			id: "7828AA12BC051811"
+			rewards: [{
+				exclude_from_claim_all: true
+				id: "1F67500F76B6E80A"
+				table_id: 7467211665176561995L
+				type: "random"
+			}]
+			tasks: [{
+				count: 3L
+				id: "01D17AD5CC74C7AF"
+				item: "arphex:necrotic_fang"
+				type: "item"
+			}]
+			title: "Webbed Warning"
+			x: 2.5d
+			y: -3.5d
+		}
+		{
+			dependencies: ["7828AA12BC051811"]
+			hide_until_deps_complete: true
+			id: "2F21D7F849BA808C"
+			rewards: [{
+				exclude_from_claim_all: true
+				id: "68A2E232D26E4070"
+				table_id: 8637294547976703744L
+				type: "random"
+			}]
+			tasks: [{
+				id: "7F22DC9E9AAF8524"
+				item: {
+					Count: 1
+					id: "dixtas_armory:iron_battle_axe"
+					tag: {
+						Damage: 0
+					}
+				}
+				type: "item"
+			}]
+			title: "Spinneret Hunt"
+			x: 4.5d
+			y: -2.5d
+		}
+		{
+			dependencies: ["2F21D7F849BA808C"]
+			description: ["Recommended biome to find Spider Snatchers is Deep Dark"]
+			hide_until_deps_complete: true
+			id: "6471ED13F7E8FB2E"
+			rewards: [{
+				exclude_from_claim_all: true
+				id: "60065D8573977EB1"
+				table_id: 600189917588052448L
+				type: "random"
+			}]
+			tasks: [{
+				entity: "arphex:spider_snatcher"
+				icon: "arphex:spider_snatcher_egg"
+				id: "430D3B6DFD0BAD18"
+				type: "kill"
+				value: 1L
+			}]
+			title: "Predator of Silk"
+			x: 5.0d
+			y: -4.5d
+		}
+		{
+			dependencies: ["6471ED13F7E8FB2E"]
+			hide_until_deps_complete: true
+			id: "15D9D07C51B52608"
+			rewards: [{
+				exclude_from_claim_all: true
+				id: "7B443D084AFEE0C3"
+				table_id: 7467211665176561995L
+				type: "random"
+			}]
+			tasks: [{
+				id: "22B5F908CBFAC2C3"
+				item: "arphex:giant_spinneret"
+				type: "item"
+			}]
+			title: "The Giant Spinneret"
+			x: 7.5d
+			y: -4.5d
+		}
+		{
+			dependencies: ["15D9D07C51B52608"]
+			hide_until_deps_complete: true
+			id: "7983BEF734E97ECB"
+			rewards: [{
+				exclude_from_claim_all: true
+				id: "71EA844290B78E4B"
+				table_id: 8576830115559125286L
+				type: "random"
+			}]
+			tasks: [{
+				id: "37EF0EB77E45A4F8"
+				item: "arphex:black_widow_bow"
+				type: "item"
+			}]
+			title: "Widow's Gift"
+			x: 7.0d
+			y: -2.5d
+		}
+		{
+			dependencies: ["7983BEF734E97ECB"]
+			hide_until_deps_complete: true
+			id: "077750E03B69D448"
+			rewards: [{
+				exclude_from_claim_all: true
+				id: "6E621B3EF01195E7"
+				table_id: 600189917588052448L
+				type: "random"
+			}]
+			tasks: [{
+				id: "26FBE08ABAA535CC"
+				item: {
+					Count: 1
+					id: "arphex:chitin_armour_tier_2_chestplate"
+					tag: {
+						Damage: 0
+					}
+				}
+				type: "item"
+			}]
+			title: "Hardened Carapace"
+			x: 8.5d
+			y: -3.0d
+		}
+		{
+			dependencies: ["077750E03B69D448"]
+			hide_until_deps_complete: true
+			id: "1FDA8D426EAAC950"
+			rewards: [{
+				exclude_from_claim_all: true
+				id: "76C9A6E4B8487281"
+				table_id: 132122336435770860L
+				type: "random"
+			}]
+			tasks: [
+				{
+					id: "2DA8F50E398BAE88"
+					item: {
+						Count: 1
+						id: "arphex:chitin_armour_tier_2_helmet"
+						tag: {
+							Damage: 0
+						}
+					}
+					type: "item"
+				}
+				{
+					id: "3B2495333D957264"
+					item: {
+						Count: 1
+						id: "arphex:chitin_armour_tier_2_leggings"
+						tag: {
+							Damage: 0
+						}
+					}
+					type: "item"
+				}
+				{
+					id: "5DEFC5B6D78ECD30"
+					item: {
+						Count: 1
+						id: "arphex:chitin_armour_tier_2_boots"
+						tag: {
+							Damage: 0
+						}
+					}
+					type: "item"
+				}
+			]
+			title: "Chitin Arsenal"
+			x: 10.0d
+			y: -2.5d
+		}
+		{
+			dependencies: ["1FDA8D426EAAC950"]
+			hide_until_deps_complete: true
+			id: "74CE055EAC097FED"
+			rewards: [{
+				exclude_from_claim_all: true
+				id: "7BC6345C4F958133"
+				table_id: 8637294547976703744L
+				type: "random"
+			}]
+			tasks: [{
+				count: 6L
+				id: "7E6757509D4F6C53"
+				item: { Count: 6, id: "arphex:burning_glands" }
+				type: "item"
+			}]
+			title: "Glands of Combustion"
+			x: 9.0d
+			y: -4.5d
+		}
+		{
+			dependencies: ["74CE055EAC097FED"]
+			hide_until_deps_complete: true
+			id: "59992733832EB478"
+			rewards: [{
+				exclude_from_claim_all: true
+				id: "50294F9D815AB5AA"
+				table_id: 7467211665176561995L
+				type: "random"
+			}]
+			tasks: [{
+				id: "068D0E74308DAB34"
+				item: "arphex:scorch_charge"
+				type: "item"
+			}]
+			title: "Smoldering Ritual"
+			x: 10.5d
+			y: -4.0d
+		}
+		{
+			dependencies: ["59992733832EB478"]
+			hide_dependency_lines: true
+			hide_until_deps_complete: true
+			id: "25E89C1E3F74171F"
+			rewards: [{
+				exclude_from_claim_all: true
+				id: "6C22C024880778CA"
+				table_id: 4271116057289917051L
+				type: "random"
+			}]
+			tasks: [{
+				id: "4FFA7D2E98E71276"
+				item: {
+					Count: 1
+					id: "backpacked:backpack"
+					tag: { }
+				}
+				type: "item"
+			}]
+			title: "Carry the Fear"
+			x: 2.0d
+			y: 2.5d
+		}
+		{
+			dependencies: ["25E89C1E3F74171F"]
+			hide_until_deps_complete: true
+			id: "026377A759BD7596"
+			rewards: [{
+				exclude_from_claim_all: true
+				id: "20018D4E671B4D31"
+				table_id: 8576830115559125286L
+				type: "random"
+			}]
+			tasks: [{
+				icon: "horror_element_mod:herobrine_head"
+				id: "0CBC65D493F9028C"
+				structure: "horror_element_mod:herobrine_sanctum"
+				title: "Find Herobrine's Sanctum"
+				type: "structure"
+			}]
+			title: "Herobrine's Mark"
+			x: 4.0d
+			y: 2.0d
+		}
+		{
+			dependencies: ["026377A759BD7596"]
+			hide_until_deps_complete: true
+			id: "55A5B6E4628F179E"
+			rewards: [{
+				exclude_from_claim_all: true
+				id: "369A4E2574BABC48"
+				table_id: 4271116057289917051L
+				type: "random"
+			}]
+			tasks: [{
+				advancement: "minecraft:story/enchant_item"
+				criterion: ""
+				id: "20B75101763C4960"
+				title: "Enchant an item"
+				type: "advancement"
+			}]
+			title: "Master Enchanter"
+			x: 3.5d
+			y: 4.5d
+		}
+		{
+			dependencies: ["55A5B6E4628F179E"]
+			hide_until_deps_complete: true
+			id: "6E1E09E67FA85FC2"
+			rewards: [{
+				exclude_from_claim_all: true
+				id: "74C897BF429E6B24"
+				table_id: 132122336435770860L
+				type: "random"
+			}]
+			tasks: [{
+				count: 2L
+				id: "6DBC918A5D89825C"
+				item: "arphex:mangled_spider_flesh"
+				type: "item"
+			}]
+			title: "Ritual of Silk and Flame"
+			x: 5.0d
+			y: 4.0d
+		}
+		{
+			dependencies: ["6E1E09E67FA85FC2"]
+			hide_until_deps_complete: true
+			id: "3672F57D1BE820B5"
+			rewards: [{
+				exclude_from_claim_all: true
+				id: "7F0237015CD888F9"
+				table_id: 7467211665176561995L
+				type: "random"
+			}]
+			tasks: [{
+				id: "589ADD11F5EF9CEC"
+				item: "arphex:bane_of_the_darkness"
+				type: "item"
+			}]
+			title: "Calm Before Wings"
+			x: 6.0d
+			y: 2.5d
+		}
+		{
+			dependencies: ["596B95A50AF78B66"]
+			hide_until_deps_complete: true
+			id: "5C4BAC5B4A42E4FC"
+			rewards: [{
+				exclude_from_claim_all: true
+				id: "2465FCC205285975"
+				table_id: 3168287151242619399L
+				type: "choice"
+			}]
+			tasks: [{
+				entity: "arphex:spider_moth"
+				icon: "arphex:spider_moth_egg"
+				id: "5B015AA0A7206ABE"
+				title: "Kill the Spider Moth boss"
+				type: "kill"
+				value: 1L
+			}]
+			title: "Wings of Cataclysm"
+			x: 8.5d
+			y: 4.5d
+		}
+		{
+			dependencies: ["3672F57D1BE820B5"]
+			description: [
+				"You can summon the Spider Moth boss by placing a Soul Sand block on top of a Mangled Spider Flesh block and lighting it on fire. You need to have the Bane Of The Darkness in your inventory."
+				""
+				"Recommended weapon: Bow"
+				""
+				"Recommended armor: Tier 2 Chitin"
+			]
+			hide_until_deps_complete: true
+			id: "596B95A50AF78B66"
+			rewards: [{
+				exclude_from_claim_all: true
+				id: "56D5B8DDEE16FE8B"
+				table_id: 3537712596570730422L
+				type: "random"
+			}]
+			tasks: [{
+				advancement: "arphex:moth_summon"
+				criterion: ""
+				icon: "arphex:spider_moth_summoner"
+				id: "1E06A56884842E57"
+				title: "Summon the Spider Moth boss"
+				type: "advancement"
+			}]
+			title: "The Sky Twitches"
+			x: 7.0d
+			y: 4.0d
+		}
+		{
+			dependencies: ["475707EE943FF7FB"]
+			hide_until_deps_complete: true
+			id: "5C6241438E8960F6"
+			rewards: [{
+				exclude_from_claim_all: true
+				id: "16A2D68A5E01E093"
+				table_id: 8576830115559125286L
+				type: "random"
+			}]
+			tasks: [
+				{
+					id: "205C551F0746A392"
+					item: {
+						Count: 1
+						id: "arphex:chitin_armour_tier_3_helmet"
+						tag: {
+							Damage: 0
+						}
+					}
+					type: "item"
+				}
+				{
+					id: "3535C4D62332E2AA"
+					item: {
+						Count: 1
+						id: "arphex:chitin_armour_tier_3_chestplate"
+						tag: {
+							Damage: 0
+						}
+					}
+					type: "item"
+				}
+				{
+					id: "7CC87C8D9206E1DD"
+					item: {
+						Count: 1
+						id: "arphex:chitin_armour_tier_3_leggings"
+						tag: {
+							Damage: 0
+						}
+					}
+					type: "item"
+				}
+				{
+					id: "17920BDBA4D8DA38"
+					item: {
+						Count: 1
+						id: "arphex:chitin_armour_tier_3_boots"
+						tag: {
+							Damage: 0
+						}
+					}
+					type: "item"
+				}
+			]
+			title: "Fully Reinforced"
+			x: -3.0d
+			y: 3.5d
+		}
+		{
+			dependencies: ["5C6241438E8960F6"]
+			hide_until_deps_complete: true
+			id: "79473515B2E91482"
+			rewards: [{
+				exclude_from_claim_all: true
+				id: "504C5B23E59194AC"
+				table_id: 600189917588052448L
+				type: "random"
+			}]
+			tasks: [{
+				id: "1BFECE5FD37B1A50"
+				item: "arphex:mantle_of_vitality"
+				type: "item"
+			}]
+			title: "Venom Tampered"
+			x: -1.5d
+			y: 4.5d
+		}
+		{
+			dependencies: ["79473515B2E91482"]
+			hide_until_deps_complete: true
+			id: "1CF3AD86D68DF934"
+			rewards: [{
+				exclude_from_claim_all: true
+				id: "59AB2D12BA2D8E2E"
+				table_id: 8637294547976703744L
+				type: "random"
+			}]
+			tasks: [{
+				id: "08F0FB485C30A441"
+				item: "arphex:abyssal_blade"
+				type: "item"
+			}]
+			title: "Echo of the Moth"
+			x: -1.0d
+			y: 6.0d
+		}
+		{
+			dependencies: ["5C4BAC5B4A42E4FC"]
+			hide_dependency_lines: true
+			hide_until_deps_complete: true
+			id: "475707EE943FF7FB"
+			rewards: [{
+				exclude_from_claim_all: true
+				id: "764E2299A4598CF2"
+				table_id: 1486905368855104270L
+				type: "random"
+			}]
+			tasks: [{
+				id: "1EE9EF7C64A81F12"
+				item: "arphex:abyssal_crystal"
+				type: "item"
+			}]
+			title: "Abyssal Crystal"
+			x: -1.5d
+			y: 3.0d
+		}
+		{
+			dependencies: ["1CF3AD86D68DF934"]
+			description: [
+				"Take a picture with this Camera of any horror mob and send it to our Discord server. We'll upload up to 3 best images on the front page of Cave Horror Project!"
+				"&o(these images will be changed weekly)&r"
+			]
+			hide_until_deps_complete: true
+			id: "7DB22BB50977A29F"
+			rewards: [{
+				exclude_from_claim_all: true
+				id: "2C2D8A4973A167FC"
+				table_id: 132122336435770860L
+				type: "random"
+			}]
+			tasks: [{
+				id: "062DC44BFEE96B52"
+				item: "exposure:camera"
+				type: "item"
+			}]
+			title: "Proof It's Real"
+			x: -3.0d
+			y: 6.5d
+		}
+		{
+			dependencies: ["7DB22BB50977A29F"]
+			hide_until_deps_complete: true
+			id: "760526237108FFCA"
+			rewards: [{
+				exclude_from_claim_all: true
+				id: "529887C8E6DBB76C"
+				table_id: 7467211665176561995L
+				type: "random"
+			}]
+			tasks: [{
+				id: "77CBB8AF5FEC2673"
+				item: "exposure:camera_stand"
+				type: "item"
+			}]
+			title: "Set the Watcher"
+			x: -4.5d
+			y: 5.5d
+		}
+		{
+			dependencies: ["760526237108FFCA"]
+			hide_until_deps_complete: true
+			id: "0319E19EC76B1597"
+			rewards: [{
+				exclude_from_claim_all: true
+				id: "6C31D4D6916C45DB"
+				table_id: 7467211665176561995L
+				type: "random"
+			}]
+			tasks: [{
+				id: "0D4C2410DD4A4641"
+				item: "exposure:black_and_white_film"
+				type: "item"
+			}]
+			title: "Memory in Monochrome"
+			x: -5.5d
+			y: 4.0d
+		}
+		{
+			dependencies: ["0319E19EC76B1597"]
+			hide_until_deps_complete: true
+			id: "36E398954A1B45F4"
+			rewards: [{
+				exclude_from_claim_all: true
+				id: "5A8E5D5001950373"
+				table_id: 132122336435770860L
+				type: "random"
+			}]
+			tasks: [{
+				count: 6L
+				id: "14E8D35950EEA04F"
+				item: { Count: 6, id: "dustydecorations:bratwurst_dog" }
+				type: "item"
+			}]
+			title: "Meat of Questionable Origin"
+			x: -6.5d
+			y: 6.0d
+		}
+		{
+			dependencies: ["36E398954A1B45F4"]
+			hide_until_deps_complete: true
+			id: "617BE7D2B2427CBA"
+			rewards: [{
+				exclude_from_claim_all: true
+				id: "6C8675806A65386E"
+				table_id: 3537712596570730422L
+				type: "random"
+			}]
+			tasks: [{
+				id: "71F008A372EBF4F8"
+				item: "born_in_chaos_v1:pieceofdarkmetal"
+				type: "item"
+			}]
+			title: "Cold Fragment of Something Older"
+			x: -5.0d
+			y: 7.5d
+		}
+	]
+	subtitle: ["The forest is alive. The ground remembers. And something ancient has chosen you."]
+	title: "The Watching Roots"
+}

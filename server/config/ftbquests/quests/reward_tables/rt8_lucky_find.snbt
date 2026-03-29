@@ -1,0 +1,43 @@
+{
+	id: "14A28C8E153ACB0E"
+	loot_size: 1
+	order_index: 8
+	rewards: [
+		{ count: 3, item: "minecraft:diamond" }
+		{
+			item: {
+				Count: 1
+				id: "dixtas_armory:diamond_zweihander"
+				tag: {
+					Damage: 0
+				}
+			}
+		}
+		{
+			item: {
+				Count: 1
+				id: "backpacked:backpack"
+				tag: { }
+			}
+		}
+		{ item: "exposure:high_sensitivity_color_film" }
+		{ item: "born_in_chaos_v1:dark_metal_ingot" }
+		{
+			item: {
+				Count: 1
+				id: "minecraft:enchanted_book"
+				tag: {
+					StoredEnchantments: [{
+						id: "minecraft:efficiency"
+						lvl: 3s
+					}]
+				}
+			}
+		}
+		{ count: 5, item: "minecraft:emerald" }
+		{ item: "minecraft:name_tag" }
+		{ item: "minecraft:totem_of_undying" }
+	]
+	title: "RT8 Lucky Find"
+	use_title: true
+}
