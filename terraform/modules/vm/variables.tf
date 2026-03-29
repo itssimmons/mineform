@@ -19,7 +19,7 @@ variable "machine_type" {
 variable "zone" {
 	description = "The zone to deploy the Compute Engine instance."
 	type        = string
-	default     = "us-central1-a"
+	default     = "southamerica-east1-a"
 }
 
 variable "project_id" {

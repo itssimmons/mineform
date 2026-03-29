@@ -12,7 +12,7 @@ resource "google_compute_instance" "vm_instance" {
     }
   }
   
-  tags = ["minecraft-server", "allow-ssh"]
+  tags = ["minecraft-server", "allow-ssh", "allow-icmp"]
 
   network_interface {
     network = var.network_name

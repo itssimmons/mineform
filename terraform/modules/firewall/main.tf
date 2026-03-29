@@ -32,3 +32,17 @@ resource "google_compute_firewall" "ssh" {
 	source_ranges = ["0.0.0.0/0"]
 	target_tags = ["allow-ssh"]
 }
+
+resource "google_compute_firewall" "icmp" {
+	name    = "allow-icmp"
+	network = var.network_name
+	
+	project = var.project_id
+
+	allow {
+		protocol = "icmp"
+	}
+	
+	source_ranges = ["0.0.0.0/0"]
+	target_tags = ["allow-icmp"]
+}
