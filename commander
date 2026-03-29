@@ -1,0 +1,58 @@
+#!/bin/bash
+set -eou pipefail
+
+# Function to get the value of a specific argument
+# Usage: get_argument "--name" "$@"
+# This function searches through the provided arguments for the specified key and returns its value.
+# If the key is not found or if it does not have a corresponding value, it will print an error message and exit with a non-zero status.
+get_argument() {
+  local key="$1"
+  shift
+
+  local args=("$@")
+
+  for ((i=0; i<${#args[@]}; i++)); do
+    if [[ "${args[i]}" == "$key" ]]; then
+      if (( i + 1 < ${#args[@]} )); then
+        echo "${args[i+1]}"
+        return 0
+      fi
+    fi
+  done
+
+  echo "Error: Missing required argument '$key'" >&2
+  return 1
+}
+for opt in ${@}; do
+	case ${opt} in
+		create)
+			echo "Creating a new module template..."
+			module_name=$(get_argument "--name" "$@")
+			mkdir -p terraform/modules/${module_name}
+			cat > terraform/modules/${module_name}/main.tf <<EOL
+# This is a template for a new Terraform module.
+# You can customize this file with your module's resources and configurations.
+EOL
+			cat > terraform/modules/${module_name}/variables.tf <<EOL
+# This file is for defining input variables for your module.
+EOL
+			cat > terraform/modules/${module_name}/outputs.tf <<EOL
+# This file is for defining output values for your module.
+EOL
+			echo "Module template created at terraform/modules/${module_name}"
+			exit 0
+			;;
+		--help|-h)
+			echo "Usage: commander [options]"
+			echo "Options:"
+			echo "  create --name [module_name]    	Create a new module template"
+			echo "  --help -h       								Show this help message and exit"
+			exit 0
+			;;
+		*)
+			echo "Unknown option: ${opt}"
+			echo "Use --help to see available options."
+			exit 1
+			;;
+	esac
+done
