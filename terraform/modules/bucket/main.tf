@@ -24,3 +24,13 @@ resource "google_storage_bucket_object" "startup_files" {
 	
 	depends_on = [google_storage_bucket.bucket]
 }
+
+resource "google_storage_bucket_object" "upload_world" {
+  for_each = fileset("${path.module}/data", "**")
+
+  name   = "data/${each.value}"
+  bucket = google_storage_bucket.bucket.name
+  source = "${path.module}/data/${each.value}"
+
+  depends_on = [google_storage_bucket.bucket]
+}
