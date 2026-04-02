@@ -9,8 +9,8 @@ gcloud storage cp gs://mineform-data/minecraft-rcon-shell /usr/local/bin/minecra
 
 # Download /data/world from bucket if it exists
 if gcloud storage ls gs://mineform-data/data/world/** >/dev/null 2>&1; then
-	mkdir -p /data/world
-  gcloud storage cp -r gs://mineform-data/data/world /data/world
+	mkdir -p /data
+  gcloud storage cp -r gs://mineform-data/data/world /data/
 fi
 
 # Update package index and upgrade system  
@@ -80,7 +80,7 @@ fi
 
 if [[ -d "/data/world" ]]; then
 	rm -rf /opt/minecraft/server/world
-	mv /data/world /opt/minecraft/server/world
+	mv /data/world /opt/minecraft/server/
 fi
 
 chown -R minecraft:minecraft /opt/minecraft/
