@@ -17,7 +17,9 @@ resource "google_compute_instance" "vm_instance" {
 
   network_interface {
     subnetwork = var.subnet_id
-    access_config {} # Gives public IP
+    access_config {
+      network_tier = "PREMIUM"
+    } # Gives public IP
   }
   
   metadata_startup_script = file("${path.module}/scripts/startup.sh")
@@ -31,17 +33,3 @@ resource "google_compute_instance" "vm_instance" {
     bucket_name      = var.bucket_name
   }
 }
-
-# resource "google_compute_health_check" "minecraft-health-check" {
-# 	name    = "minecraft-health-check"
-# 	project = var.project_id
-
-# 	check_interval_sec   = 60
-# 	timeout_sec          = 10
-# 	unhealthy_threshold  = 3
-# 	healthy_threshold    = 1
-
-# 	tcp_health_check {
-# 		port = "25565"
-# 	}
-# }
