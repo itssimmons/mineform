@@ -8,6 +8,7 @@ resource "google_compute_instance" "vm_instance" {
   boot_disk {
     initialize_params {
       image = "debian-cloud/debian-11"
+      type  = "pd-ssd"
       size  = 10
     }
   }
@@ -31,16 +32,16 @@ resource "google_compute_instance" "vm_instance" {
   }
 }
 
-resource "google_compute_health_check" "minecraft-health-check" {
-	name    = "minecraft-health-check"
-	project = var.project_id
+# resource "google_compute_health_check" "minecraft-health-check" {
+# 	name    = "minecraft-health-check"
+# 	project = var.project_id
 
-	check_interval_sec   = 60
-	timeout_sec          = 10
-	unhealthy_threshold  = 3
-	healthy_threshold    = 1
+# 	check_interval_sec   = 60
+# 	timeout_sec          = 10
+# 	unhealthy_threshold  = 3
+# 	healthy_threshold    = 1
 
-	tcp_health_check {
-		port = "25565"
-	}
-}
+# 	tcp_health_check {
+# 		port = "25565"
+# 	}
+# }

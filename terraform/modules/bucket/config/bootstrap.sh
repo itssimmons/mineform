@@ -3,10 +3,6 @@ set -e
 
 start_time=$(date +%s)
 
-# Download needed files from Bucket
-gcloud storage cp gs://mineform-data/minecraftd.conf /etc/supervisor/conf.d/minecraftd.conf
-gcloud storage cp gs://mineform-data/minecraft-rcon-shell /usr/local/bin/minecraft-rcon-shell
-
 # Download /data/world from bucket if it exists
 if gcloud storage ls gs://mineform-data/data/world/** >/dev/null 2>&1; then
 	mkdir -p /data
@@ -16,9 +12,9 @@ fi
 # Update package index and upgrade system  
 apt-get update -y
 apt-get install -y --no-install-recommends \
-  git make curl wget openssh-client \
-  openjdk-17-jre-headless supervisor \
-  build-essential git-lfs
+  git openssh-client \
+  openjdk-17-jre-headless \
+  git-lfs screen
 
 # Create a directory for the Minecraft server
 mkdir -p /opt/minecraft
@@ -39,11 +35,11 @@ Host github.com
   IdentityFile ~/.ssh/github_key
 EOF
 
-grep -q "ForceCommand /usr/local/bin/minecraft-rcon-shell" /etc/ssh/sshd_config || \
+grep -q "Match User minecraft" /etc/ssh/sshd_config || \
 cat <<EOF >> /etc/ssh/sshd_config
 
 Match User minecraft
-  ForceCommand /usr/local/bin/minecraft-rcon-shell
+	ForceCommand bash -c 'cd /opt/minecraft/server && exec screen -xRR minecraft'
   PermitTTY yes
   AllowTcpForwarding no
   X11Forwarding no
@@ -86,26 +82,9 @@ fi
 chown -R minecraft:minecraft /opt/minecraft/
 chmod +x /opt/minecraft/server/run.sh
 
-# Install mcrcon for RCON access (optional, but useful for server management)
-if ! command -v mcrcon >/dev/null 2>&1; then
-	git clone https://github.com/Tiiffi/mcrcon.git /tmp/mcrcon
-	cd /tmp/mcrcon
-	make
-	make install
-	mcrcon -h > /dev/null 2>&1 || false
-	rm -rf /tmp/mcrcon
-fi
-
-chmod +x /usr/local/bin/minecraft-rcon-shell
-chown minecraft:minecraft /usr/local/bin/minecraft-rcon-shell
-
 # Test SSH configuration and restart SSH service
 sshd -t
 systemctl restart ssh
-
-# Enable and start supervisor
-systemctl enable supervisor
-systemctl start supervisor
 
 # Clean up
 apt-get autoremove -y
@@ -116,3 +95,14 @@ end_time=$(date +%s)
 elapsed_time=$((${end_time} - ${start_time}))
 
 echo "Done in ${elapsed_time}s ✨"
+echo "Starting Minecraft server..."
+
+# Logging setup
+mkdir -p /var/log
+touch /var/log/minecraft.log
+chown minecraft:minecraft /var/log/minecraft.log
+chmod 600 /var/log/minecraft.log
+
+# Start server with Screen
+su - minecraft -c \
+	"cd /opt/minecraft/server && screen -L -Logfile /var/log/minecraft.log -dmS minecraft ./run.sh"
