@@ -8,8 +8,8 @@
 # Uncomment the next line to set it.
 
 # Memory
--Xms4G
--Xmx4G
+-Xms6G
+-Xmx6G
 
 # Garbage Collector (G1GC tuned for modded servers)
 -XX:+UseG1GC
