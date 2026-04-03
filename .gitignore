@@ -30,6 +30,7 @@ cache/
 # Java / JVM files
 *.class
 *.log
+*.jar
 
 # Session / temporary files
 *.tmp
