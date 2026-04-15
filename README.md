@@ -57,7 +57,7 @@ terraform apply "tfplan"
 ### 2. Start the Server
 
 ```bash
-sudo systemctl enable minecraft-bootstap
+screen -L -Logfile /var/log/minecraft.log -dmS minecraft ./run.sh
 ```
 
 > [!IMPORTANT]
